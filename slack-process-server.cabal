@@ -1,0 +1,36 @@
+name:                slack-process-server
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/CthulhuDen/slack-process-server#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Cthulhu
+maintainer:          cthulhu.den@gmail.com
+copyright:           2017 Cthulhu
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+library
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+  exposed-modules:     Network.RTM.Slack.Maintainer
+                       Network.RTM.Slack.Server
+  default-extensions:  NoImplicitPrelude
+                       OverloadedStrings
+  build-depends:       base >= 4.7 && < 5
+                     , classy-prelude
+                     , distributed-process
+                     , distributed-process-client-server
+                     , distributed-process-extras
+                     , slack-rtm-state
+                     , slack-api
+                     , binary
+                     , mtl
+
+source-repository head
+  type:     git
+  location: https://github.com/CthulhuDen/slack-process-server
